@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashRescue Now - Get Cash in 24 Hours</title>
+    <meta name="description" content="Emergency cash flow packages for freelancers and small businesses. Deploy done-for-you offers and generate revenue in 24 hours.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: linear-gradient(135deg, #16A34A 0%, #F59E0B 100%);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .urgency-badge {
+            background: #DC2626;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-primary {
+            display: inline-block;
+            background: #DC2626;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+        }
+        .cta-primary:hover {
+            background: #B91C1C;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+        }
+        .countdown {
+            background: rgba(0,0,0,0.3);
+            padding: 15px 30px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .content-section {
+            background: white;
+            border-radius: 12px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #2d3748;
+            text-align: center;
+        }
+        .problem-section {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .problem-section h3 {
+            color: #92400E;
+            margin-bottom: 15px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature-card {
+            padding: 30px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .feature-card:hover {
+            border-color: #16A34A;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.15);
+        }
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .feature-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .pricing-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .pricing-card.featured {
+            border-color: #16A34A;
+            transform: scale(1.05);
+        }
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #16A34A;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        .tier-name {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 3em;
+            font-weight: 800;
+            color: #16A34A;
+            margin: 15px 0;
+        }
+        .tier-description {
+            color: #64748B;
+            margin-bottom: 20px;
+        }
+        .tier-features {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .tier-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            list-style: none;
+        }
+        .tier-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #16A34A;
+            font-weight: bold;
+        }
+        .tier-cta {
+            display: inline-block;
+            background: #16A34A;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .tier-cta:hover {
+            background: #15803D;
+        }
+        ul.deliverables {
+            list-style: none;
+            margin: 30px auto;
+            max-width: 600px;
+        }
+        ul.deliverables li {
+            padding: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1em;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        ul.deliverables li:before {
+            content: "⚡";
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        .guarantee {
+            background: #ECFDF5;
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #16A34A;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .guarantee h3 {
+            color: #16A34A;
+            margin-bottom: 10px;
+        }
+        .testimonial {
+            background: #F8FAFC;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .final-cta {
+            background: linear-gradient(135deg, #16A34A 0%, #15803D 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .final-cta h2 {
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .pricing-card.featured { transform: none; }
+            .pricing-card.featured:hover { transform: translateY(-5px); }
+        }
+    </style>
+<!-- Google Analytics (GA4) - Measurement ID to be set by Kiki via KIKI-G11 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge urgency-badge">⚡ Same-Day Delivery Guaranteed</span>
+            <h1>Get Cash in 24 Hours with Done-Today Offers</h1>
+            <p class="subtitle">Emergency cash flow packages for freelancers and small businesses who need revenue TODAY, not next month.</p>
+            <a href="https://godmode.gumroad.com/l/cashrescue" class="cta-primary">Get Your Rescue Pack Now →</a>
+            <div class="countdown">
+                🔥 <strong>Limited Time:</strong> Bonus strategy call included with Premium tier
+            </div>
+        </header>
+
+        <section class="content-section">
+            <h2>Is This You Right Now?</h2>
+            <div class="problem-section">
+                <h3>⚠️ The Cash Flow Emergency</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 10px 0;">😰 Bills are due and your pipeline is dry</li>
+                    <li style="padding: 10px 0;">⏰ You need revenue THIS WEEK, not next quarter</li>
+                    <li style="padding: 10px 0;">🔄 Stuck in feast-or-famine cycles with no escape</li>
+                    <li style="padding: 10px 0;">📦 Don't have time to build offers from scratch</li>
+                </ul>
+            </div>
+            <p style="text-align: center; font-size: 1.2em; margin-top: 30px;">
+                <strong>You don't need another course. You need a ready-to-deploy offer that closes TODAY.</strong>
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>What You Get Inside</h2>
+            <ul class="deliverables">
+                <li><strong>3 Done-For-You Offer Templates</strong> — Plug & play, deploy in minutes</li>
+                <li><strong>Pricing Calculator Spreadsheet</strong> — Know exactly what to charge</li>
+                <li><strong>24-Hour Outreach Script Pack</strong> — Proven DM and email scripts</li>
+                <li><strong>Client DM Templates</strong> — LinkedIn + Email sequences that convert</li>
+                <li><strong>Fast-Close Proposal Template</strong> — Close deals same-day</li>
+                <li><strong>Urgency Timer Setup Guide</strong> — Create FOMO that works</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>How It Works</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📥</div>
+                    <div class="feature-title">1. Download</div>
+                    <p>Get instant access to all templates and scripts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✏️</div>
+                    <div class="feature-title">2. Customize</div>
+                    <p>Fill in your details (takes 15 minutes)</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📤</div>
+                    <div class="feature-title">3. Send</div>
+                    <p>Deploy outreach to your network</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-title">4. Close</div>
+                    <p>Land your first client within 24-48 hours</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Choose Your Rescue Package</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="tier-name">Quick Cash Starter</div>
+                    <div class="price">$47</div>
+                    <p class="tier-description">Perfect for testing the waters</p>
+                    <ul class="tier-features">
+                        <li>1 Done-For-You Offer Template</li>
+                        <li>Outreach Script Pack</li>
+                        <li>Pricing Calculator</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <a href="https://godmode.gumroad.com/l/cashrescue-starter" class="tier-cta">Get Started →</a>
+                </div>
+                <div class="pricing-card featured">
+                    <span class="popular-badge">MOST POPULAR</span>
+                    <div class="tier-name">CashRescue Pro</div>
+                    <div class="price">$97</div>
+                    <p class="tier-description">Everything you need to land clients fast</p>
+                    <ul class="tier-features">
+                        <li>3 Done-For-You Offer Templates</li>
+                        <li>Full Outreach Script Pack</li>
+                        <li>Fast-Close Proposal Template</li>
+                        <li>LinkedIn + Email DM Templates</li>
+                        <li>Urgency Timer Guide</li>
+                        <li>Priority Email Support</li>
+                    </ul>
+                    <a href="https://godmode.gumroad.com/l/cashrescue-pro" class="tier-cta">Get Pro Access →</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="tier-name">Revenue Sprint Bundle</div>
+                    <div class="price">$297</div>
+                    <p class="tier-description">Complete system + personal support</p>
+                    <ul class="tier-features">
+                        <li>Everything in Pro</li>
+                        <li>1-on-1 Strategy Call (30 min)</li>
+                        <li>Custom Offer Review</li>
+                        <li>90-Day Support Access</li>
+                        <li>Bonus: Affiliate Swipe Files</li>
+                    </ul>
+                    <a href="https://godmode.gumroad.com/l/cashrescue-bundle" class="tier-cta">Get Full Bundle →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="guarantee">
+                <h3>🛡️ 7-Day Money-Back Guarantee</h3>
+                <p>If you don't land a client within 7 days of using the system, we'll refund 100% of your purchase. No questions asked.</p>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <h2>Stop Waiting. Start Earning.</h2>
+            <p style="margin: 20px 0; font-size: 1.2em;">Every day without cash flow is a day you're falling behind. Get the tools to turn it around TODAY.</p>
+            <a href="https://godmode.gumroad.com/l/cashrescue" class="cta-primary" style="background: white; color: #16A34A;">Get Your Rescue Pack Now →</a>
+        </section>
+
+        <footer>
+            <p>© 2026 CashRescue Now — An ASI Innovative Solutions LLC Business</p>
+            <p style="margin-top: 10px;">
+                <a href="https://thecashrescue.com/terms.html">Terms of Service</a> | 
+                <a href="https://thecashrescue.com/privacy.html">Privacy Policy</a> | 
+                <a href="https://thecashrescue.com/refunds.html">Refund Policy</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
